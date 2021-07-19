@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KindleClippingTools.Tests", "KindleClippingTools.Tests\KindleClippingTools.Tests.csproj", "{AA191116-30E7-4703-B265-B3E08256692E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KindleClippingTools.Logic", "KindleClippingTools.Logic\KindleClippingTools.Logic.csproj", "{74C5FF76-AB93-4758-95D4-B0E0B7B04D19}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA191116-30E7-4703-B265-B3E08256692E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA191116-30E7-4703-B265-B3E08256692E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA191116-30E7-4703-B265-B3E08256692E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA191116-30E7-4703-B265-B3E08256692E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C5FF76-AB93-4758-95D4-B0E0B7B04D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C5FF76-AB93-4758-95D4-B0E0B7B04D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C5FF76-AB93-4758-95D4-B0E0B7B04D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C5FF76-AB93-4758-95D4-B0E0B7B04D19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
