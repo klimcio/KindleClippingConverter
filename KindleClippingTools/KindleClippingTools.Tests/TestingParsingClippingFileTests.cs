@@ -9,6 +9,7 @@ namespace KindleClippingTools.Tests
 {
     public class TestingParsingClippingFileTests
     {
+        private string EmptyClippingFile => $"{Environment.CurrentDirectory}\\TestFiles\\EmptyClippingFile.txt";
         private string OneClippingFile => $"{Environment.CurrentDirectory}\\TestFiles\\OneClippingFile.txt";
         private string MultipleClippingFile => $"{Environment.CurrentDirectory}\\TestFiles\\MultipleClippingFiles.txt";
 
@@ -18,6 +19,14 @@ namespace KindleClippingTools.Tests
 
             var results = sut.ParseFile(filePath);
             return results;
+        }
+
+        [Fact]
+        public void Testing_when_empty_clipping_file_returns_empty_list()
+        {
+            List<Clipping> results = ParseFile(EmptyClippingFile);
+
+            results.Count.Should().Be(0);
         }
 
         [Fact]
@@ -36,9 +45,6 @@ namespace KindleClippingTools.Tests
             clipping.CreatedOn.Should().Be(new DateTime(2014, 9, 9, 21, 41, 6));
             clipping.Content.Should().Be("„Tora”, czyli „Prawo”, wskazuje na ich treść: przepisy prawa, przekazanego Mojżeszowi (stąd także nazwa „Prawo Mojżeszowe”) dla całego Izraela, zajmują najwięcej miejsca.");
         }
-
-
-        // TODO: Test with multiple line content
 
         [Fact]
         public void Testing_multiple_clipping_file_will_return_list_of_elements()
@@ -88,5 +94,7 @@ namespace KindleClippingTools.Tests
         }
 
         // TODO: Test highlight with attached note
+
+        // TODO: Test with multiple line content
     }
 }

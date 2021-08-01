@@ -28,6 +28,9 @@
     <None Update="TestFiles\MultipleClippingFiles.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="TestFiles\EmptyClippingFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="TestFiles\OneClippingFile.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
