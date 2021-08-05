@@ -31,7 +31,7 @@ namespace KindleClippingTools.Logic
 
         public Clipping Create(string clipping)
         {
-            var clippingLines = clipping.Split(new[] { Environment.NewLine }, StringSplitOptions.None)
+            var clippingLines = clipping.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None)
                 .Where(x => !string.IsNullOrWhiteSpace(x))
                 .ToList();
 
