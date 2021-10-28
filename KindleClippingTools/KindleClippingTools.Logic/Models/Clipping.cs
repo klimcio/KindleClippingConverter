@@ -6,7 +6,7 @@ namespace KindleClippingTools.Logic
     {
         public Clipping(string title, 
             ClippingType type, 
-            int pageNumber, 
+            int? pageNumber, 
             int locationStart, 
             DateTime createdOn, 
             int? locationEnd = null, 
@@ -23,7 +23,7 @@ namespace KindleClippingTools.Logic
 
         public string Title { get; }
         public ClippingType Type { get; }
-        public int PageNumber { get; }
+        public int? PageNumber { get; }
         public int LocationStart { get; }
         public int? LocationEnd { get; }
         public DateTime CreatedOn { get; }
