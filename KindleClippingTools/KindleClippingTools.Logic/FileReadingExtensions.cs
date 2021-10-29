@@ -68,10 +68,6 @@ namespace KindleClippingTools.Logic
                 return null;
             
             var locationEndString = line2section2.Split("-").Last().Trim();
-            //if (dashIndex == -1)
-            //    return null;
-
-            //var locationEndString = line2section2.Substring(dashIndex + 1);
 
             return Convert.ToInt32(locationEndString);
         }
@@ -86,25 +82,11 @@ namespace KindleClippingTools.Logic
                 .Where(x => !string.IsNullOrWhiteSpace(x))
                 .ToArray();
 
-            //var containsDash = line.Contains("-");
-
-            var locationStartString = locationArray.First() //[dashIndex == -1 ? 0 : locationArray.Length - 1]
+            var locationStartString = locationArray.First()
                 .Split(" ")
                 .Where(x => !string.IsNullOrWhiteSpace(x))
                 .Last()
                 .Trim();
-            //int startIndex = line2section2.IndexOf("location") + "location".Length;
-
-            //string locationStartString;
-            //if (dashIndex == -1)
-            //{
-            //    locationStartString = line2section2.Substring(startIndex).Trim();
-            //}
-            //else
-            //{
-            //    var length = dashIndex - startIndex;
-            //    locationStartString = line2section2.Substring(startIndex, length).Trim();
-            //}
 
             return Convert.ToInt32(locationStartString);
         }
