@@ -4,12 +4,12 @@ namespace KindleClippingTools.Logic
 {
     public class Clipping
     {
-        public Clipping(string title, 
-            ClippingType type, 
-            int? pageNumber, 
-            int locationStart, 
-            DateTime createdOn, 
-            int? locationEnd = null, 
+        public Clipping(string title,
+            ClippingType type,
+            int? pageNumber,
+            int locationStart,
+            DateTime createdOn,
+            int? locationEnd = null,
             string content = "")
         {
             Title = title;
@@ -27,6 +27,9 @@ namespace KindleClippingTools.Logic
         public int LocationStart { get; }
         public int? LocationEnd { get; }
         public DateTime CreatedOn { get; }
-        public string Content { get; }
+        public string Content { get; set; }
+
+        public bool IsHighlight => Type == ClippingType.Highlight;
+        public string TempFileName => $"{(IsHighlight ? "H" : "N")}_{PageNumber}_{LocationStart}.md";
     }
 }
