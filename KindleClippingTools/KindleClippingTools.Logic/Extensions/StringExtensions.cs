@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("KindleClippingTools.Tests")]
-namespace KindleClippingTools.Logic
+namespace KindleClippingTools.Logic.Extensions
 {
     internal static class StringExtensions
     {

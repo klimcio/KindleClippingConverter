@@ -1,5 +1,5 @@
 ﻿using FluentAssertions;
-using KindleClippingTools.Logic;
+using KindleClippingTools.Logic.Extensions;
 using Xunit;
 
 namespace KindleClippingTools.Tests

@@ -1,4 +1,5 @@
 ﻿using KindleClippingTools.Logic;
+using KindleClippingTools.Logic.Extensions;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

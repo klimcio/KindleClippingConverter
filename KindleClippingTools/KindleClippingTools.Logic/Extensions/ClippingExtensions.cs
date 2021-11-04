@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 
 [assembly: InternalsVisibleTo("KindleClippingTools.Tests")]
-namespace KindleClippingTools.Logic
+namespace KindleClippingTools.Logic.Extensions
 {
     internal static class ClippingExtensions
     {
