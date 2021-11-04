@@ -1,6 +1,5 @@
 ﻿using KindleClippingTools.Logic;
 using KindleClippingTools.Logic.Extensions;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Xunit;
@@ -9,25 +8,19 @@ namespace KindleClippingTools.Tests.Execs
 {
     public class ExecutablesAsTests
     {
-        private string[] GetFiles() 
-            => Directory.GetFiles(@"C:\Users\MAKLIM\Dropbox\Projekty\clippings");
-
         [Fact]
         public void RunClippingConverter()
         {
-            var filesToConvert = GetFiles();
-
+            var targetDirectory = @"C:\_Temp\Kindle";
+            var sourceDirectory = @"C:\Users\MAKLIM\Dropbox\Projekty\clippings";
+            
             var converter = new KindleClippingParser();
-            var list = new List<Clipping>();
 
-            var clippings = GetFiles()
+            Directory.GetFiles(sourceDirectory)
                 .SelectMany(file => converter.ParseFile(file))
                 .Where(x => x.Type != ClippingType.Bookmark)
-                .GroupBy(x => x.Title);
-                
-            var targetDirectory = @"C:\_Temp\Kindle";
-
-            clippings.BackupKindleClippings(targetDirectory);
+                .GroupBy(x => x.Title)
+                .BackupKindleClippings(targetDirectory);
         }
     }
 }
